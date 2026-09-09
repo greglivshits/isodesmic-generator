@@ -63,4 +63,9 @@ script and can be extended.
 
 ## License
 
-TO BE CHOSEN BY THE AUTHORS BEFORE DEPOSITION.
+MIT License. See `LICENSE`.
+
+## Citation
+
+If you use this code, please cite the paper above and the archived release
+(DOI to be added once the first release is deposited).
