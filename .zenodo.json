@@ -1,0 +1,22 @@
+{
+  "upload_type": "software",
+  "title": "Automated isodesmic reaction generator for high-energy materials",
+  "description": "<p>Code accompanying the paper <em>Benchmarking DFT and Machine Learning Potentials for Heat of Formation and Combustion of High-Energy Materials</em>.</p><p>For a target molecule the script enumerates isodesmic reactions against a curated library of small reference species and ranks them. Bond conservation is encoded as bond signatures (bond order together with the hybridisation and aromaticity of the connected atoms) and solved with a linear programming solver under random cost-vector perturbations, so that many distinct valid schemes are found. A secondary ring-breaking relaxation is applied where strict conservation is impossible for fused ring systems. Candidates are ranked by an IsoScore that balances chemical simplicity, Tanimoto structural similarity to the reference library, and stoichiometric cost.</p><p>The repository contains the generator, the input file with the twenty high-energy materials of the benchmark set, and a README.</p>",
+  "creators": [
+    { "name": "Livshits, Grigorii", "affiliation": "Bar-Ilan University" },
+    { "name": "Ben Noach, Maor", "affiliation": "Bar-Ilan University" },
+    { "name": "Hen, Dorin", "affiliation": "Bar-Ilan University" },
+    { "name": "Nordon, Galia", "affiliation": "Bar-Ilan University" },
+    { "name": "Bernstein, Jonathan", "affiliation": "Bar-Ilan University" },
+    { "name": "Major, Dan T.", "affiliation": "Bar-Ilan University" }
+  ],
+  "keywords": [
+    "isodesmic reactions",
+    "thermochemistry",
+    "heat of formation",
+    "energetic materials",
+    "machine-learned interatomic potentials",
+    "density functional theory"
+  ],
+  "access_right": "open"
+}
