@@ -12,7 +12,11 @@ import io
 from collections import defaultdict
 
 # --- Configuration ---
-INPUT_FILE = "molecules.txt"
+# v1.1 (2026-10-25): fixed random seed for reproducible variant enumeration;
+# input file can be given as the first command-line argument.
+RANDOM_SEED = 20261025
+np.random.seed(RANDOM_SEED)
+INPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "molecules.txt"
 OUTPUT_FILE = "isodesmic_structural_similarity.txt"
 IMAGE_DIR = "reaction_images_similarity"
 
@@ -146,7 +150,7 @@ def get_bond_signature(mol_in, kekulize=False):
 
 # --- Solver Logic ---
 
-def solve_reaction_multimode(target_mol, library_mols, kekulize=False, num_attempts=500, n_saves=40):
+def solve_reaction_multimode(target_mol, library_mols, kekulize=False, num_attempts=2000, n_saves=40):
     target_feats = get_bond_signature(target_mol, kekulize=kekulize)
     lib_names = list(library_mols.keys())
     all_keys = set(target_feats.keys())

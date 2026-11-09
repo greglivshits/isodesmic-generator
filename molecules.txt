@@ -11,10 +11,10 @@ TATB NC1=C(N)C(=C(N)C(=C1[N+](=O)[O-])[N+](=O)[O-])[N+](=O)[O-]
 PETN O=[N+]([O-])OCC(CO[N+](=O)[O-])(CO[N+](=O)[O-])CO[N+](=O)[O-]
 BTF C12=NO[N+](=C1C3=NO[N+](=C3C4=NO[N+](=C24)[O-])[O-])[O-]
 RDX O=[N+]([O-])N1CN([N+](=O)[O-])CN([N+](=O)[O-])C1
-HMX O=[N+]([O-])N1CN([N+](=O)[O-])CN([N+](=O)[O-])CN1[N+](=O)[O-]
+HMX O=[N+]([O-])N1CN([N+](=O)[O-])CN([N+](=O)[O-])CN([N+](=O)[O-])C1
 CL20 C12C3N(C4C(N3[N+](=O)[O-])N(C(N1[N+](=O)[O-])C(N2[N+](=O)[O-])N4[N+](=O)[O-])[N+](=O)[O-])[N+](=O)[O-]
 TMTNB CC1=C([N+]([O-])=O)C(C)=C([N+]([O-])=O)C(C)=C1[N+]([O-])=O
 FOX7 C(=C(N)N)([N+](=O)[O-])[N+](=O)[O-]
 NQ N=C(N)N[N+](=O)[O-]
 TEX C12C3N(C4C(N1[N+](=O)[O-])OC(O4)C(O2)O3)[N+](=O)[O-]
-NTO O=C1N=CN([N+](=O)[O-])N1
+NTO O=C1[NH]N=C([N+](=O)[O-])[NH]1

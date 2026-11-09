@@ -4,7 +4,9 @@ Code accompanying:
 
 > G. Livshits, M. Ben Noach, D. Hen, G. Nordon, J. Bernstein and D. T. Major,
 > *Benchmarking DFT and Machine Learning Potentials for Heat of Formation and
-> Combustion of High-Energy Materials*, Phys. Chem. Chem. Phys., submitted.
+> Combustion of High-Energy Materials*, Phys. Chem. Chem. Phys., under revision.
+
+Current version: 1.1.0 (see `CHANGELOG.md`).
 
 ## What it does
 
@@ -19,7 +21,8 @@ library of small, well characterised reference species, and ranks them.
    programming solver (`scipy.optimize.linprog`), under random cost-vector
    perturbations so that many distinct valid schemes are found.
 3. Where strict bond conservation is impossible for fused ring systems, a
-   secondary "ring-breaking" relaxation (Kekule form) is applied.
+   secondary "ring-breaking" relaxation (Kekule form) is applied. The output
+   marks each molecule as `Strict` or `Kekulize` accordingly.
 4. Candidate reactions are ranked by **IsoScore**:
 
        IsoScore = (10 - N) + SimScore - 0.0001 * C
@@ -41,9 +44,9 @@ Install with `pip install numpy scipy rdkit pillow`.
 
 ## Usage
 
-    python isodesmic_similarity.py
+    python isodesmic_similarity.py [input_file]
 
-The script reads `molecules.txt` from the working directory. Each line holds a
+Without an argument the script reads `molecules.txt` from the working directory. Each line holds a
 molecule label and its SMILES string, separated by whitespace:
 
     RDX O=[N+]([O-])N1CN([N+](=O)[O-])CN([N+](=O)[O-])C1
@@ -51,6 +54,9 @@ molecule label and its SMILES string, separated by whitespace:
 `molecules.txt` in this repository contains the twenty high-energy materials of
 the benchmark set. With no input file present the script runs a single-molecule
 demonstration on RDX.
+
+The random cost vectors are drawn with a fixed seed (`RANDOM_SEED` at the top of
+the script), so repeated runs give the same variants.
 
 ## Output
 
@@ -67,5 +73,6 @@ MIT License. See `LICENSE`.
 
 ## Citation
 
-If you use this code, please cite the paper above and the archived release
-(DOI to be added once the first release is deposited).
+If you use this code, please cite the paper above and the archived release on
+Zenodo (version 1.0.0: https://doi.org/10.5281/zenodo.22675287; see the Zenodo
+record for the DOI of later versions).
